@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Alimama_ShuHeiTi_Bold';
+    src: url(../fonts/Alimama_ShuHeiTi_Bold.woff2);
+}
+
+.AlibabaBold {
+    font-family: 'Alimama_ShuHeiTi_Bold';
+    font-weight: 700;
+    font-style: normal;
+}
