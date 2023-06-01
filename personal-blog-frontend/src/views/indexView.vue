@@ -17,15 +17,15 @@
           <div class="middle-items">
               <div>
                 <wenku style="margin-right: 10px"></wenku>
-                <span style="font-size: 22px">文库</span>
+                <span>文库</span>
               </div>
               <div>
                 <daima style="margin-right: 10px"></daima>
-                <span style="font-size: 22px">项目</span>
+                <span>项目</span>
               </div>
               <div>
                 <life style="margin-right: 10px"></life>
-                <span style="font-size: 22px">生活</span>
+                <span>生活</span>
               </div>
               <div>
                 <benzhan style="margin-right: 5px"></benzhan>
@@ -98,7 +98,7 @@ export default {
   top: 0;
   left: 0;
   /*transform: translate(-50%,-50%);*/
-  /*z-index: -1;*/
+  z-index: -1;
 }
 
 #nav {
@@ -109,7 +109,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 69px;
+  height: 60px;
   background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   /*border-dashed: 1px dashed #e3e8f7;*/
   box-shadow: 1px 1px #e3e8f7;
@@ -141,15 +141,21 @@ export default {
   display: flex;
   padding: 0 8px;
   border-radius: 6px;
+  transition: all 0.5s;
 }
 
 #head-menu:hover {
   background-color: rgb(66,90,239);
-  transition: background-color 0.8s;
+  transition: all 0.5s;
 }
 
 #head-menu:hover .svg11 {
   fill: white;
+  transition: all 0.5s;
+}
+
+#head-menu .svg11 {
+  transition: all 0.5s;
 }
 
 #name {
@@ -161,11 +167,12 @@ export default {
   vertical-align: middle;
   line-height: 36px;
   border-radius: 6px;
+  transition: all 0.5s;
 }
 
 #name:hover {
   background-color: rgb(66,90,239);
-  transition: background-color 0.8s;
+  transition: all 0.5s;
   color: white;
   cursor: pointer;
 }
@@ -192,17 +199,18 @@ export default {
   cursor: pointer;
   padding: 0 10px;
   border-radius: 6px;
+  transition: all 0.5s;
 }
 
 .middle-items > div:hover {
   background: rgb(66,90,239);
-  transition: background-color 0.8s;
+  transition: all 0.5s;
   color: white;
   fill: white;
 }
 
 .middle-items div {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 #nav-right {
@@ -218,11 +226,12 @@ export default {
   cursor: pointer;
   overflow: hidden;
   border-radius: 6px;
+  transition: all 0.5s;
 }
 
 #nav-right > div:hover {
   background-color: rgb(66,90,239);
-  transition: background-color 0.8s;
+  transition: all 0.5s;
   color: white;
 }
 </style>

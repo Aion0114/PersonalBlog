@@ -1,12 +1,19 @@
 <template>
   <div id="main">
-    <div id="message-board"></div>
+    <div id="message-board">
+      <div style="margin: 0 30px"><comment style="font-size: 22px"></comment></div>
+      <div class="AlibabaBold" style="font-size: 20px">个人博客正在建设！</div>
+      <div style="margin: 0 30px"><revocation style="font-size: 22px"></revocation></div>
+    </div>
   </div>
 </template>
 
 <script>
+import Comment from "@/components/icon/comment";
+import Revocation from "@/components/icon/revocation";
 export default {
-  name: "homeView"
+  name: "homeView",
+  components: {Revocation, Comment}
 }
 </script>
 
@@ -15,10 +22,27 @@ export default {
   width: 100%;
   max-width: 1370px;
   margin: 0 auto;
+  flex-direction: column;
 }
 
 #message-board {
-  margin: 10px;
-  height: 40px;
+  display: flex;
+  margin: 10px auto;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  border-radius: 8px;
+  border: lavender solid 1px;
+  transition: all 0.35s linear;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#message-board:hover {
+  cursor: pointer;
+  border: #333333 solid 1px;
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
 }
 </style>
