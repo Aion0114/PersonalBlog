@@ -7,13 +7,13 @@ const routes = [
       path: '/',
       component: indexView,
       redirect: '/home',
+      meta: {
+        title: '冰块的个人博客(*^▽^*)'
+      },
       children: [
         {
           path: 'home',
-          component: homeView,
-          meta: {
-            title: '冰块的个人博客(*^▽^*)'
-          }
+          component: homeView
         }
       ]
     },
