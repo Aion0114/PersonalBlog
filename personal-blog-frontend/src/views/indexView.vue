@@ -114,6 +114,7 @@ export default {
   /*border-dashed: 1px dashed #e3e8f7;*/
   box-shadow: 1px 1px #e3e8f7;
   padding: 0 42px;
+  z-index: 99;
 }
 
 #nav-info {
