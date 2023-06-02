@@ -6,11 +6,30 @@
       <div style="margin: 0 30px"><revocation style="font-size: 22px"></revocation></div>
     </div>
     <div id="main-back">
+<!--      核心左栏-->
       <div id="main-left">
         <div id="heat-map">
           <get-heat-map></get-heat-map>
+          <div id="countVisits" class="AlibabaBold">
+            <div style="border-top: 1px solid #ddd">
+              <span class="countVisits-first-span">一年内访问</span>
+              <span class="countVisits-second-span">6389</span>
+              <span class="countVisits-third-span">2023-01-01 - 2023-12-31</span>
+            </div>
+            <div style="border: 1px solid #ddd; border-bottom: none">
+              <span class="countVisits-first-span">本月内访问</span>
+              <span class="countVisits-second-span">755</span>
+              <span class="countVisits-third-span">2023-06-01 - 2023-6-30</span>
+            </div>
+            <div style="border-top: 1px solid #ddd">
+              <span class="countVisits-first-span">今日内访问</span>
+              <span class="countVisits-second-span">82</span>
+              <span class="countVisits-third-span">2023-06-02 - 2023-06-02</span>
+            </div>
+          </div>
         </div>
       </div>
+<!--      核心右栏-->
       <div id="main-right"></div>
     </div>
   </div>
@@ -78,6 +97,43 @@ export default {
   width: 100%;
   background-color: white;
   border-radius: 8px;
+  padding: 10px;
+}
+
+#countVisits {
+  display: flex;
+  width: 100%;
+}
+
+.countVisits-first-span {
+  font-size: 11px;
+  font-weight: 300;
+}
+
+.countVisits-second-span {
+  display: block;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.3em;
+  padding: 6px 0;
+}
+
+.countVisits-third-span {
+  font-size: 11px;
+  font-weight: 300;
+}
+
+#countVisits>div {
+  padding: 10px;
+  flex: 1;
+  text-align: center;
+  vertical-align: top;
+  transition: all 0.3s;
+}
+
+#countVisits>div:hover {
+  color: #425aef;
+  transition: all 0.3s;
 }
 
 #main-right {

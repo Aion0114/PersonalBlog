@@ -29,7 +29,7 @@ onMounted(() => {
   const myChart = proxy.$echarts.init(heat.value);
   myChart.setOption({
     title: {
-      top: 20,
+      top: 10,
       left: 'center',
       text: 'Website visits'
     },
@@ -40,10 +40,10 @@ onMounted(() => {
       type: 'piecewise',
       orient: 'horizontal',
       left: 'center',
-      top: 55
+      top: 45
     },
     calendar: {
-      top: 110,
+      top: 100,
       left: 30,
       right: 30,
       cellSize: 20,
@@ -69,8 +69,8 @@ onMounted(() => {
 
 <style lang="less" scoped>
 .about {
-  width: 1070px;
-  height: 280px;
+  width: 1030px;
+  height: 270px;
   margin-left: 20px;
 }
 </style>

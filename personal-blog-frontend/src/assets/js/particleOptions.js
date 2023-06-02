@@ -35,7 +35,8 @@ export const options = {
     },
     particles: {
         color: {
-            value: '#ffffff'
+            // value: '#ffffff'
+            value: 'linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);'
         },
         links: {
             color: '#ffffff', // '#dedede'。线条颜色。
