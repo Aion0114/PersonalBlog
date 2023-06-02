@@ -30,7 +30,20 @@
         </div>
       </div>
 <!--      核心右栏-->
-      <div id="main-right"></div>
+      <div id="main-right">
+<!--        个人信息简介-->
+        <div class="AlibabaBold" id="Personal-profile">
+          <div id="profile-avatar-name">
+            <div id="avatar"></div>
+            <div style="margin-left: 18px">
+              <div id="profile-name-welcome">Hello,欢迎,我是</div>
+              <div id="profile-name-text">林昊</div>
+            </div>
+          </div>
+          <div style="line-height: 1.4; margin-top: 20px">记录生活的点点滴滴</div>
+          <div style="line-height: 1.4; margin-top: 10px">好好打工ଘ(੭ˊᵕˋ)੭<br/>好好干饭ღ( ´･ᴗ･ )<br/>做好自己✧ (＞ ＜)☆<br/>厚积薄发⁽⁽ଘ( ˊᵕˋ )ଓ⁾⁾</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -41,7 +54,15 @@ import Revocation from "@/components/icon/revocation";
 import GetHeatMap from "@/components/getHeatMap";
 export default {
   name: "homeView",
-  components: {GetHeatMap, Revocation, Comment}
+  components: {GetHeatMap, Revocation, Comment},
+  setup() {
+   const staticdata = {
+
+   }
+   return {
+     staticdata,
+   }
+  }
 }
 </script>
 
@@ -138,5 +159,42 @@ export default {
 
 #main-right {
   width: 300px;
+  padding-left: 15px;
+}
+
+#Personal-profile {
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  border-radius: 8px;
+  color: #fff;
+  padding: 20px 24px;
+}
+
+#profile-avatar-name {
+  display: flex;
+  align-items: center;
+}
+
+#profile-name-welcome {
+  text-align: left;
+  background: rgba(255,255,255,.25);
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+#profile-name-text {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.5;
+  font-family: "Microsoft YaHei";
+}
+
+#avatar {
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  background-image: url("../assets/xxx.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>
