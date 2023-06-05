@@ -8,6 +8,7 @@
     <div id="main-back">
 <!--      核心左栏-->
       <div id="main-left">
+<!--        热力图-->
         <div id="heat-map">
           <get-heat-map></get-heat-map>
           <div id="countVisits" class="AlibabaBold">
@@ -26,6 +27,21 @@
               <span class="countVisits-second-span">82</span>
               <span class="countVisits-third-span">2023-06-02 - 2023-06-02</span>
             </div>
+          </div>
+        </div>
+<!--        文章分栏-->
+        <div class="article-classification AlibabaBold">
+          <div class="classification-pre-icon"></div>
+          <div class="classification-bar">
+            <div class="classification-bar-first">
+              <div>Java<sup>7</sup></div>
+              <div>Spring<sup>12</sup></div>
+              <div>中间件<sup>5</sup></div>
+              <div>前端<sup>3</sup></div>
+              <div>求职心得<sup>1</sup></div>
+              <div>路线规划<sup>1</sup></div>
+            </div>
+            <div class="classification-bar-last">更多</div>
           </div>
         </div>
       </div>
@@ -78,6 +94,14 @@ export default {
 </script>
 
 <style scoped>
+sup {
+  top: -0.5em;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
 #main {
   width: 100%;
   max-width: 1370px;
@@ -166,6 +190,75 @@ export default {
 #countVisits>div:hover {
   color: #425aef;
   transition: all 0.3s;
+}
+
+.article-classification {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  border: lavender solid 1px;
+  border-radius: 8px;
+  padding: 0 20px;
+  margin-top: 10px;
+  transition: all 0.35s;
+}
+
+.article-classification:hover {
+  border: #333333 solid 1px;
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
+}
+
+.classification-pre-icon {
+  width: 28px;
+  height: 28px;
+  background: url("../assets/c008renwuliebiao.png") no-repeat;
+  background-size: cover;
+}
+
+.classification-bar {
+  padding: 0.4rem 1rem 0.4rem 0.5rem;
+  display: flex;
+  white-space: nowrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.classification-bar-first {
+  white-space: nowrap;
+  display: flex;
+}
+
+.classification-bar-first > div {
+  padding: 0.4rem 0.5rem;
+  margin: 0 0.25rem;
+  font-weight: 700;
+  border-radius: 6px;
+  font-size: 18px;
+  transition: all 0.35s;
+}
+
+.classification-bar-first > div:hover {
+  background: rgb(66,90,239);
+  color: white;
+  transition: all 0.35s;
+  cursor: pointer;
+}
+
+.classification-bar-last {
+  margin-left: 1rem;
+  font-weight: 700;
+  color: #363636;
+  font-size: 18px;
+  line-height: 28px;
+  transition: all 0.35s;
+}
+
+.classification-bar-last:hover {
+  color: rgb(66,90,239);
+  transition: all 0.35s;
+  cursor: pointer;
 }
 
 #main-right {
