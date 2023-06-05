@@ -42,6 +42,17 @@
           </div>
           <div style="line-height: 1.4; margin-top: 20px">记录生活的点点滴滴</div>
           <div style="line-height: 1.4; margin-top: 10px">好好打工ଘ(੭ˊᵕˋ)੭<br/>好好干饭ღ( ´･ᴗ･ )<br/>做好自己✧ (＞ ＜)☆<br/>厚积薄发⁽⁽ଘ( ˊᵕˋ )ଓ⁾⁾</div>
+          <div style="display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      margin-top: 50px">
+            <a href="https://github.com/Aion0114" target="_blank">
+                <div id="icon-github"></div>
+            </a>
+            <div>
+              <el-button class="AlibabaBold" color="#626aef" round icon="Right" plain style="transition: all 0.35s; height: 40px; font-size: 18px">了解更多</el-button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -197,4 +208,13 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#icon-github {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: url('../assets/github.png') no-repeat;
+  background-size: cover;
+}
+
 </style>
