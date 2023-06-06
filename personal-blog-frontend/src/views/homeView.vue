@@ -1,5 +1,5 @@
 <template>
-  <div id="main">
+  <div id="main-homeview">
     <div id="message-board">
       <div style="margin: 0 30px"><comment style="font-size: 22px"></comment></div>
       <div class="AlibabaBold" style="font-size: 20px">个人博客正在建设！</div>
@@ -102,7 +102,7 @@ sup {
   vertical-align: baseline;
 }
 
-#main {
+#main-homeview {
   width: 100%;
   max-width: 1370px;
   margin: 0 auto;
