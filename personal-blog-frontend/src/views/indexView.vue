@@ -124,7 +124,7 @@ export default {
 
 #main {
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
   padding: 0;
   margin-top: 70px;
   height: 2000px;
