@@ -127,7 +127,7 @@ export default {
   /*align-items: center;*/
   padding: 0;
   margin-top: 70px;
-  height: 2000px;
+
 }
 
 #foot {
