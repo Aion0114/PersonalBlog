@@ -45,19 +45,61 @@
 <!--      第二行右盒子-->
       <div class="about-box-flag AlibabaBold" style="width: 59%; line-height: 1.55; font-size: 18px">
         <div style="font-size: 14px; margin-bottom: 12px">个人信息</div>
-        <div style="padding-left: 30px">Name: <span>林昊</span></div>
-        <div style="padding-left: 30px">Age: <span>22</span></div>
-        <div style="padding-left: 30px">City: <span>广东肇庆</span></div>
-        <div style="padding-left: 30px">Company: <span>LESSO</span></div>
+        <div class="Second-little-box"><el-icon :size="20" color="#409EFF" style="margin-right: 5px"><UserFilled /></el-icon>Name:
+          <span style="padding-left: 10px">林昊</span>
+        </div>
+        <div class="Second-little-box"><el-icon :size="20" color="#F8DA5E" style="margin-right: 5px"><UserFilled /></el-icon>Age:
+          <span style="padding-left: 10px">22</span>
+        </div>
+        <div class="Second-little-box"><el-icon :size="20" color="#008C8D" style="margin-right: 5px"><location /></el-icon>City:
+          <span style="padding-left: 10px">广东肇庆</span>
+        </div>
+        <div class="Second-little-box"><el-icon :size="20" color="#696AAD" style="margin-right: 5px"><Suitcase /></el-icon>Company:
+          <span style="padding-left: 10px">LESSO</span>
+        </div>
       </div>
     </div>
-    <div></div>
+<!--    第三行-->
+    <div class="helloWorld" @mousemove="helloworldmove">
+      <div class="cursor"></div>
+      <div class="shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+      <div class="content">
+        <h1 class="AlibabaBold">Hello World!</h1>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import {onMounted} from "vue";
+import gsap from "gsap";
+
 export default {
-  name: "about"
+  name: "about",
+  setup() {
+
+    const helloworldmove = function (e) {
+      const o = e.offsetX
+          , s = e.offsetY;
+      gsap.set(".cursor", {
+        x: o,
+        y: s
+      });
+      gsap.to(".shape", {
+        x: o,
+        y: s,
+        stagger: -.1
+      })
+    }
+
+    return {
+      helloworldmove,
+    }
+  }
 }
 </script>
 
@@ -172,5 +214,100 @@ p {
   line-height: 2;
   text-indent: 1em;
   font-size: 16px;
+}
+
+.Second-little-box {
+  padding-left: 20px;
+  color: #4c4948;
+  display: flex;
+  align-items: center;
+}
+
+.helloWorld {
+  margin: 20px auto;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 16px -4px rgba(44,45,48,0.047);
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  line-height: 2;
+  color: #4c4948;
+}
+
+.cursor {
+  position: absolute;
+  background: #2128bd;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border-radius: 50%;
+  will-change: transform;
+  user-select: none;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.shapes {
+  position: relative;
+  height: 315px;
+  width: 100%;
+  background: #2128bd;
+  overflow: hidden;
+}
+
+.shapes > div {
+  will-change: transform;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.shape-1 {
+  background: #005ffe;
+  width: 650px;
+  height: 650px;
+  margin: -325px 0 0 -325px;
+
+}
+
+.shape-2 {
+  background: #ffe5e3;
+  width: 440px;
+  height: 440px;
+  margin: -220px 0 0 -220px;
+}
+
+.shape-3 {
+  background: #ffcc57;
+  width: 270px;
+  height: 270px;
+  margin: -135px 0 0 -135px;
+}
+
+.content {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 315px;
+  width: 100%;
+  background: #fff;
+  mix-blend-mode: screen;
+}
+
+.content h1 {
+  color: #000;
+  margin: 0;
+  text-align: center;
+  vertical-align: baseline;
+  line-height: 1;
+  font-size: calc((.09 * 100vw + 40px));
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
