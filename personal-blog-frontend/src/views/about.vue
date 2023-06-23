@@ -29,6 +29,29 @@
       </div>
     </div>
 <!--    第二行-->
+    <div class="about-box" style="align-items: center">
+<!--      第二行左盒子-->
+      <div class="about-box-flag" style="width: 40%;">
+        <div class="AlibabaThin" style="color: #4c4948;
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        line-height: 1.5;
+                                        margin-bottom: 10px;">喜欢的一句话</div>
+        <div class="AlibabaBold" style="font-size: 32px; color: #4c4948; line-height: 1.3;">
+          <div>把活着的每一天<br/>看作生命的最后一天</div>
+          <div style="text-align: right; font-size: 24px; color:#fa7671;">——海伦·凯勒</div>
+        </div>
+      </div>
+<!--      第二行右盒子-->
+      <div class="about-box-flag AlibabaBold" style="width: 59%; line-height: 1.55; font-size: 18px">
+        <div style="font-size: 14px; margin-bottom: 12px">个人信息</div>
+        <div style="padding-left: 30px">Name: <span>林昊</span></div>
+        <div style="padding-left: 30px">Age: <span>22</span></div>
+        <div style="padding-left: 30px">City: <span>广东肇庆</span></div>
+        <div style="padding-left: 30px">Company: <span>LESSO</span></div>
+      </div>
+    </div>
+    <div></div>
   </div>
 </template>
 

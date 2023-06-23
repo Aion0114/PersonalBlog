@@ -3,8 +3,18 @@
     src: url(../fonts/Alimama_ShuHeiTi_Bold.woff2);
 }
 
+@font-face {
+    font-family: 'AlimamaAgileVF-Thin';
+    src: url(../fonts/AlimamaAgileVF-Thin.woff2);
+}
+
 .AlibabaBold {
     font-family: 'Alimama_ShuHeiTi_Bold';
     font-weight: 700;
+    font-style: normal;
+}
+
+.AlibabaThin {
+    font-family: 'AlimamaAgileVF-Thin';
     font-style: normal;
 }
