@@ -34,7 +34,7 @@ router.beforeEach(async (to) => {
     document.title = to.meta.title;
   }
   else {
-    document.title = '图像加密系统';
+    document.title = '个人博客';
   }
 });
 

@@ -71,6 +71,93 @@
         <h1 class="AlibabaBold">Hello World!</h1>
       </div>
     </div>
+<!--    第四行-->
+    <div class="about-box">
+<!--      左盒子-->
+      <div class="skills">
+        <div class="card-content">
+          <div class="skill-tips">技能</div>
+          <span class="skill-title">开启创造力</span>
+          <div style="position: relative">
+            <div style="display: flex; transform: rotate(0); transition: .3s">
+              <div class="tag-group">
+                <div class="tag-group-icon-pair">
+                  <div class="tag-group-icon" style="background: #333">
+                    <img src="../assets/frameIcon/java.png" title="Java" alt="无法显示"
+                         style="width: 60%;
+                                margin: 0 auto!important;
+                                border-style: none;">
+                  </div>
+                  <div class="tag-group-icon sec" style="background: #b8f0ae">
+                    <img src="../assets/frameIcon/dubbo.png" title="Dubbo" alt="无法显示"
+                         style="width: 70%;
+                         margin: 0 auto!important;
+                         border-style: none;">
+                  </div>
+                </div>
+                <div class="tag-group-icon-pair">
+                  <div class="tag-group-icon" style="background: #faf3c3">
+                    <img src="../assets/frameIcon/spring.png" title="Spring" alt="无法显示"
+                         style="width: 60%;
+                         margin: 0 auto!important;
+                         border-style: none;">
+                  </div>
+                  <div class="tag-group-icon sec" style="background: #81CAC3">
+                    <img src="../assets/frameIcon/Zookeeper.png" title="Zookeeper" alt="无法显示"
+                         style="width: 60%;
+                         margin: 0 auto!important;
+                         border-style: none;">
+                  </div>
+                </div>
+                <div class="tag-group-icon-pair">
+                  <div class="tag-group-icon" style="background: #b8f0ae">
+                    <img src="../assets/frameIcon/mybatis.png" title="Mybatis" alt="无法显示"
+                         style="width: 70%;
+                         margin: 0 auto!important;
+                         border-style: none;">
+                  </div>
+                  <div class="tag-group-icon sec" style="background: #333">
+                    <img src="../assets/frameIcon/rabbitmq.png" title="RabbitMQ" alt="无法显示"
+                         style="width: 60%;
+                         margin: 0 auto!important;
+                         border-style: none;">
+                  </div>
+                </div>
+                <div class="tag-group-icon-pair">
+                  <div class="tag-group-icon" style="background: #faf3c3">
+                    <img src="../assets/frameIcon/maven.png" title="Maven" alt="无法显示"
+                         style="width: 70%;
+                         margin: 0 auto!important;
+                         border-style: none;">
+                  </div>
+                  <div class="tag-group-icon sec" style="background: #37bef0">
+                    <img src="../assets/frameIcon/mysql.png" title="Mysql" alt="无法显示"
+                         style="width: 60%;
+                         margin: 0 auto!important;
+                         border-style: none;">
+                  </div>
+                </div>
+                <div class="tag-group-icon-pair">
+                  <div class="tag-group-icon" style="background: #333">
+                    <img src="../assets/frameIcon/tomcat.png" title="Tomcat" alt="无法显示"
+                         style="width: 60%;
+                         margin: 0 auto!important;
+                         border-style: none;">
+                  </div>
+                  <div class="tag-group-icon sec" style="background: #333">
+                    <img src="../assets/frameIcon/redis.png" title="Redis" alt="无法显示"
+                         style="width: 60%;
+                         margin: 0 auto!important;
+                         border-style: none;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -309,5 +396,74 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50%;
+  min-height: 400px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #e3e8f7;
+  position: relative;
+  padding: 1rem 2rem;
+  overflow: hidden;
+}
+
+.skill-tips {
+  color: #4c4948;
+  opacity: 0.8;
+  font-size: .6rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-title {
+  margin-bottom: 0.5rem;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+@keyframes rowup {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.tag-group {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: nowrap;
+  animation: rowup 60s linear infinite;
+}
+
+.tag-group-icon-pair {
+  margin-left: 1rem;
+}
+
+.tag-group-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 66px;
+  font-weight: 700;
+  width: 120px;
+  height: 120px;
+  border-radius: 30px;
+}
+
+.tag-group-icon.sec {
+  margin-top: 1rem;
+  transform: translate(-60px);
 }
 </style>
