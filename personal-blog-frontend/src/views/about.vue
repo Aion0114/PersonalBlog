@@ -79,7 +79,7 @@
           <div class="skill-tips">技能</div>
           <span class="skill-title">开启创造力</span>
           <div style="position: relative">
-            <div style="display: flex; transform: rotate(0); transition: .3s">
+            <div class="skills-box" style="display: flex; transform: rotate(0); transition: .3s">
               <div class="tag-group">
                 <div class="tag-group-icon-pair">
                   <div class="tag-group-icon" style="background: #333">
@@ -153,7 +153,68 @@
                 </div>
               </div>
             </div>
-            <div></div>
+            <div class="skills-list AlibabaBold">
+              <div class="skill-info">
+                <div class="skill-icon" style="background: #333">
+                  <img class="skill-icon-img" src="../assets/frameIcon/java.png" alt="无法显示" title="Java">
+                </div>
+                <div class="skill-name"><span>Java</span></div>
+              </div>
+              <div class="skill-info">
+                <div class="skill-icon" style="background: #faf3c3">
+                  <img class="skill-icon-img" src="../assets/frameIcon/spring.png" title="Spring" alt="无法显示">
+                </div>
+                <div class="skill-name"><span>Spring</span></div>
+              </div>
+              <div class="skill-info">
+                <div class="skill-icon" style="background: #b8f0ae">
+                  <img class="skill-icon-img" style="width: 22px; height: 22px" src="../assets/frameIcon/mybatis.png" title="Mybatis" alt="无法显示">
+                </div>
+                <div class="skill-name"><span>Mybatis</span></div>
+              </div>
+              <div class="skill-info">
+                <div class="skill-icon" style="background: #faf3c3">
+                  <img class="skill-icon-img" src="../assets/frameIcon/maven.png" title="Maven" alt="无法显示">
+                </div>
+                <div class="skill-name"><span>Maven</span></div>
+              </div>
+              <div class="skill-info">
+                <div class="skill-icon" style="background: #333">
+                  <img class="skill-icon-img" src="../assets/frameIcon/tomcat.png" title="Tomcat" alt="无法显示">
+                </div>
+                <div class="skill-name"><span>Tomcat</span></div>
+              </div>
+              <div class="skill-info">
+                <div class="skill-icon" style="background: #b8f0ae">
+                  <img class="skill-icon-img" style="width: 22px; height: 22px" src="../assets/frameIcon/dubbo.png" title="Dubbo" alt="无法显示">
+                </div>
+                <div class="skill-name"><span>Dubbo</span></div>
+              </div>
+              <div class="skill-info">
+                <div class="skill-icon" style="background: #81CAC3">
+                  <img class="skill-icon-img" src="../assets/frameIcon/Zookeeper.png" title="Zookeeper" alt="无法显示">
+                </div>
+                <div class="skill-name"><span>Zookeeper</span></div>
+              </div>
+              <div class="skill-info">
+                <div class="skill-icon" style="background: #333">
+                  <img class="skill-icon-img" src="../assets/frameIcon/rabbitmq.png" title="RabbitMQ" alt="无法显示">
+                </div>
+                <div class="skill-name"><span>RabbitMQ</span></div>
+              </div>
+              <div class="skill-info" style="margin-right: 30px">
+                <div class="skill-icon" style="background: #37bef0">
+                  <img class="skill-icon-img" src="../assets/frameIcon/mysql.png" title="Mysql" alt="无法显示">
+                </div>
+                <div class="skill-name"><span>Mysql</span></div>
+              </div>
+              <div class="skill-info">
+                <div class="skill-icon" style="background: #333">
+                  <img class="skill-icon-img" src="../assets/frameIcon/redis.png" title="Redis" alt="无法显示">
+                </div>
+                <div class="skill-name"><span>Redis</span></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -465,5 +526,53 @@ p {
 .tag-group-icon.sec {
   margin-top: 1rem;
   transform: translate(-60px);
+}
+
+.skills-list {
+  display: flex;
+  opacity: 0;
+  transition: .3s;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.card-content:hover .skills-box {
+  opacity: 0;
+}
+
+.card-content:hover .skills-list {
+  opacity: 1;
+}
+
+.skill-info {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-top: 10px;
+  background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  border-radius: 40px;
+  padding: 4px 12px 4px 8px;
+  border: 1px solid #e3e8f7;
+}
+
+.skill-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.skill-icon-img {
+  width: 18px;
+  height: 18px;
+  margin: 0 auto!important;
 }
 </style>
