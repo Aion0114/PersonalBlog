@@ -218,6 +218,21 @@
           </div>
         </div>
       </div>
+<!--      右盒子-->
+      <div class="personalities AlibabaBold">
+        <div class="personalities-tips">性格</div>
+        <span class="personalities-title">守卫者</span>
+        <div class="isfj" style="color: #ac899c">ISFJ</div>
+        <div class="post-tips">
+          在
+          <a href="https://www.16personalities.com/" target="_blank">16personalities</a>
+           了解更多关于
+          <a href="https://www.16personalities.com/ch/isfj-%E4%BA%BA%E6%A0%BC" target="_blank">守卫者</a>
+        </div>
+        <div class="personalities-img">
+          <img src="../assets/ISFJ.svg" alt="无法显示">
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -574,5 +589,72 @@ p {
   width: 18px;
   height: 18px;
   margin: 0 auto!important;
+}
+
+.personalities {
+  position: relative;
+  width: 49%;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #e3e8f7;
+  padding: 1rem 2rem;
+  overflow: hidden;
+}
+
+.personalities:hover img{
+  transform: rotate(-10deg);
+  transition: ease-in-out 0.8s;
+}
+
+.personalities-tips {
+  opacity: .8;
+  font-size: .6rem;
+  margin-bottom: 1rem;
+}
+
+.personalities-title {
+  margin-bottom: 0.5rem;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.isfj {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 5px;
+}
+
+.post-tips {
+  color: #999;
+  font-size: 14px;
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+}
+
+.post-tips a {
+  color: #425aef!important;
+  border: none!important;
+  text-decoration: none;
+  transition: all .35s;
+  overflow-wrap: break-word;
+}
+
+.personalities-img {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  width: 220px;
+  transition: transform 2s cubic-bezier(.13,.45,.21,1.02);
+  border-style: none;
+}
+
+.personalities-img img {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+  transition: ease-in-out 0.8s;
 }
 </style>
