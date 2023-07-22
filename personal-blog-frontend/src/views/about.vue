@@ -234,6 +234,13 @@
         </div>
       </div>
     </div>
+<!--    第五行-->
+    <div class="about-box">
+      <div class="fav-game AlibabaBold">
+        <div class="game-tips">爱好游戏</div>
+        <span class="game-title">奥日与黑暗森林</span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -656,5 +663,32 @@ p {
   margin: 0 auto 20px;
   max-width: 100%;
   transition: ease-in-out 0.8s;
+}
+
+.fav-game {
+  background: url("../assets/ori.png") no-repeat top;
+  background-size: cover;
+  min-height: 500px;
+  overflow: hidden;
+  color: #fff;
+  width: 59%;
+  border-radius: 12px;
+  border: 1px solid #e3e8f7;
+  position: relative;
+  padding: 1rem 2rem;
+}
+
+.game-tips {
+  opacity: .8;
+  font-size: .6rem;
+  margin-bottom: 0.5rem;
+  line-height: 2;
+}
+
+.game-title {
+  margin-bottom: 0.5rem;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
 }
 </style>
