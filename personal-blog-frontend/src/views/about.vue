@@ -237,9 +237,24 @@
 <!--    第五行-->
     <div class="about-box">
       <div class="fav-game AlibabaBold">
-        <div class="game-tips">爱好游戏</div>
-        <span class="game-title">奥日与黑暗森林</span>
+        <div>
+          <div class="game-tips">爱好游戏</div>
+          <span class="game-title">奥日与黑暗森林</span>
+        </div>
       </div>
+      <div class="fav-film AlibabaBold">
+        <div>
+          <div class="film-tips">爱好番剧</div>
+          <span class="film-title">来自深渊</span>
+        </div>
+      </div>
+    </div>
+<!--    第六行-->
+    <div class="about-box">
+      <div class="fav-food">
+        <div></div>
+      </div>
+      <div class="fav-music"></div>
     </div>
   </div>
 </template>
@@ -668,13 +683,25 @@ p {
 .fav-game {
   background: url("../assets/ori.png") no-repeat top;
   background-size: cover;
-  min-height: 500px;
+  min-height: 600px;
   overflow: hidden;
   color: #fff;
   width: 59%;
   border-radius: 12px;
   border: 1px solid #e3e8f7;
   position: relative;
+  padding: 1rem 2rem;
+}
+
+.fav-game > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
   padding: 1rem 2rem;
 }
 
@@ -686,6 +713,45 @@ p {
 }
 
 .game-title {
+  margin-bottom: 0.5rem;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.fav-film {
+  width: 39%;
+  background: url("../assets/madeInAbyss.jpeg") no-repeat top;;
+  background-size: cover;
+  min-height: 600px;
+  overflow: hidden;
+  color: white;
+  border-radius: 12px;
+  border: 1px solid #e3e8f7;
+  position: relative;
+  padding: 1rem 2rem;
+}
+
+.fav-film > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+}
+
+.film-tips {
+  opacity: .8;
+  font-size: .6rem;
+  margin-bottom: 0.5rem;
+  line-height: 2;
+}
+
+.film-title {
   margin-bottom: 0.5rem;
   font-size: 36px;
   font-weight: 700;
