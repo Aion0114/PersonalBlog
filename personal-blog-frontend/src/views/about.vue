@@ -252,9 +252,17 @@
 <!--    第六行-->
     <div class="about-box">
       <div class="fav-food">
-        <div></div>
+        <div class="card-food">
+          <div class="food-tips">关注偏好</div>
+          <span class="food-title">美食频道</span>
+        </div>
       </div>
-      <div class="fav-music"></div>
+      <div class="fav-music">
+        <div class="card-music">
+          <div class="music-tips">音乐偏好</div>
+          <span class="music-title">五月天乐队</span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -752,6 +760,81 @@ p {
 }
 
 .film-title {
+  margin-bottom: 0.5rem;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.fav-food {
+  background: url("../assets/steak.jpg") no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  color: white;
+  width: 51%;
+  border-radius: 12px;
+  border: 1px solid #e3e8f7;
+  position: relative;
+  padding: 1rem 2rem;
+  overflow: hidden;
+}
+
+.card-food {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+}
+
+.food-tips {
+  opacity: .8;
+  font-size: .6rem;
+  margin-bottom: 0.5rem;
+}
+
+.food-title {
+  margin-bottom: 0.5rem;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.fav-music {
+  background: url("../assets/wuyuetian.jpg") no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  color: white;
+  overflow: hidden;
+  width: 47%;
+  border-radius: 12px;
+  border: 1px solid #e3e8f7;
+  position: relative;
+  padding: 1rem 2rem;
+}
+
+.card-music {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+}
+
+.music-tips {
+  opacity: .8;
+  font-size: .6rem;
+  margin-bottom: 0.5rem;
+}
+
+.music-title {
   margin-bottom: 0.5rem;
   font-size: 36px;
   font-weight: 700;
