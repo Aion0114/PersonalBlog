@@ -66,7 +66,8 @@
                 <div id="icon-github"></div>
             </a>
             <div>
-              <el-button class="AlibabaBold" color="#626aef" round icon="Right" plain style="transition: all 0.35s; height: 40px; font-size: 18px">了解更多</el-button>
+              <el-button class="AlibabaBold" color="#626aef" round icon="Right" plain
+                         style="transition: all 0.35s; height: 40px; font-size: 18px" @click="jump.jumpToAbout()">了解更多</el-button>
             </div>
           </div>
         </div>
@@ -79,15 +80,21 @@
 import Comment from "@/components/icon/comment";
 import Revocation from "@/components/icon/revocation";
 import GetHeatMap from "@/components/getHeatMap";
+import jumpMethod from "@/router/jumpMethod";
 export default {
   name: "homeView",
   components: {GetHeatMap, Revocation, Comment},
   setup() {
+
    const staticdata = {
 
    }
-   return {
-     staticdata,
+
+   const jump = jumpMethod.setup()
+
+    return {
+      staticdata,
+      jump,
    }
   }
 }
@@ -107,6 +114,18 @@ sup {
   max-width: 1370px;
   margin: 0 auto;
   flex-direction: column;
+  animation: bottom-top 1s;
+}
+
+@keyframes bottom-top {
+  0% {
+    margin-top: 50px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
 }
 
 #message-board {

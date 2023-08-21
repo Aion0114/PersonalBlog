@@ -10,7 +10,7 @@
           <div id="head-menu">
             <head-menu style="cursor: pointer; margin-top: 6px"></head-menu>
           </div>
-          <div class="AlibabaBold" id="name">Aion</div>
+          <div class="AlibabaBold" id="name" @click="jump.jumpToHome()">Aion</div>
         </span>
         <!--        中栏-->
         <span id="nav-middle" class="AlibabaBold">
@@ -19,7 +19,7 @@
                 <wenku style="margin-right: 10px"></wenku>
                 <span>文库</span>
               </div>
-              <div>
+              <div @click="jump.jumpToProject()">
                 <daima style="margin-right: 10px"></daima>
                 <span>项目</span>
               </div>
@@ -62,6 +62,7 @@ import Gengduo from "@/components/icon/gengduo";
 import {reactive} from "vue";
 import {options} from "@/assets/js/particleOptions";
 import {loadFull} from 'tsparticles';
+import jumpMethod from "@/router/jumpMethod";
 
 export default {
   name: "indexView",
@@ -76,10 +77,13 @@ export default {
       console.log('Particles container loaded', container)
     }
 
+    const jump = jumpMethod.setup();
+
     return {
       particlesInit,
       particlesLoaded,
       options,
+      jump,
     }
   }
 }
