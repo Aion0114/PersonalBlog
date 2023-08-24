@@ -3,10 +3,11 @@
     <div id="main-area">
       <div id="myProject">
 <!--        项目区域-->
-        <div id="project-area">
+<!--        我的项目-->
+        <div class="project-area">
           <div style="font-size: 1.6rem">我的项目</div>
 <!--          项目列表-->
-          <div id="project-list">
+          <div class="project-list">
 <!--            项目item-->
             <div class="project-list-item">
               <a title="" target="_blank">
@@ -16,6 +17,69 @@
                 <div class="project-list-item-info">
                   <div class="project-list-item-name">个人博客</div>
                   <div class="project-list-item-detail">每个人心中应该都有属于自己展示的舞台吧!</div>
+                </div>
+              </a>
+            </div>
+            <div class="project-list-item">
+              <a title="" target="_blank">
+                <div class="project-list-item-icon">
+                  <img src="../assets/imageDecry.png" alt="个人博客">
+                </div>
+                <div class="project-list-item-info">
+                  <div class="project-list-item-name">二维码为载体的图像加密管理系统</div>
+                  <div class="project-list-item-detail">我的毕业设计!图片采用了AES-CFB算法分组加密!</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+<!--        资源分享-->
+        <div class="project-area">
+          <div style="font-size: 1.6rem">资源分享</div>
+          <!--          项目列表-->
+          <div class="project-list">
+            <!--            项目item-->
+            <div class="project-list-item">
+              <a title="" href="https://codepen.io/" target="_blank">
+                <div class="project-list-item-icon">
+                  <img src="../assets/codepen.png" alt="CodePen">
+                </div>
+                <div class="project-list-item-info">
+                  <div class="project-list-item-name">CodePen</div>
+                  <div class="project-list-item-detail">一个前端在线编辑页面工具,里面有很多炫酷的特效设计,还带有代码托管功能</div>
+                </div>
+              </a>
+            </div>
+            <div class="project-list-item">
+              <a title="" target="_blank" href="https://greensock.com/">
+                <div class="project-list-item-icon">
+                  <img src="../assets/greensock.png" alt="GSAP">
+                </div>
+                <div class="project-list-item-info">
+                  <div class="project-list-item-name">GSAP</div>
+                  <div class="project-list-item-detail">一个炒鸡炒鸡厉害好用的前端动画库!</div>
+                </div>
+              </a>
+            </div>
+            <div class="project-list-item">
+              <a title="" target="_blank" href="https://ai-bot.cn/">
+                <div class="project-list-item-icon">
+                  <img src="../assets/aibot.png" alt="AI工作集">
+                </div>
+                <div class="project-list-item-info">
+                  <div class="project-list-item-name">AI工作集</div>
+                  <div class="project-list-item-detail">500+ AI工具导航大全，国内外AI工具集合网站</div>
+                </div>
+              </a>
+            </div>
+            <div class="project-list-item">
+              <a title="" target="_blank" href="https://madewith.cn/">
+                <div class="project-list-item-icon">
+                  <img src="../assets/madewith.svg" alt="美创意">
+                </div>
+                <div class="project-list-item-info">
+                  <div class="project-list-item-name">美创意</div>
+                  <div class="project-list-item-detail">收集引用了许多有创意的小组件或者成品的页面</div>
                 </div>
               </a>
             </div>
@@ -82,12 +146,12 @@ export default {
   line-height: 2;
 }
 
-#project-area {
+.project-area {
   margin-bottom: 20px;
 }
 
-#project-list {
-  overflow: auto;
+.project-list {
+  /*overflow: auto;*/
   margin-top: 15px;
   text-align: center;
   display: grid;
@@ -97,10 +161,11 @@ export default {
 }
 
 .project-list-item {
+  cursor: pointer;
   background-color: white;
   position: relative;
   float: left;
-  overflow: hidden;
+  /*overflow: hidden;*/
   line-height: 17px;
   height: 150px;
   padding: 20px;
@@ -115,6 +180,7 @@ export default {
 }
 
 .project-list-item:hover {
+  transform: translateY(-12px);
   border-color: #425aef!important;
   background-color: #425aef!important;
   box-shadow: 0 2px 12px -3px #425aef!important;
@@ -126,7 +192,7 @@ export default {
   height: 100px;
   transition: all .3s ease-out;
   margin: 5px 0 20px 0;
-  border-radius: 50%;
+  /*border-radius: 50%;*/
   overflow: hidden;
 }
 
