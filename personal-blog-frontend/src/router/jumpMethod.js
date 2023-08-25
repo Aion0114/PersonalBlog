@@ -14,7 +14,10 @@ export default {
             },
             jumpToProject() {
                 router.push("/project");
-            }
+            },
+            jumpToPhoto() {
+                router.push("/photo");
+            },
         }
     }
 }

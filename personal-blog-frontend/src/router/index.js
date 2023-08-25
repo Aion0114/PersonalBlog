@@ -3,6 +3,7 @@ import indexView from "@/views/indexView";
 import homeView from "@/views/homeView";
 import about from "@/views/about";
 import projectView from "@/views/projectView";
+import photoView from "@/views/photoView";
 
 const routes = [
     {
@@ -25,6 +26,10 @@ const routes = [
           path: 'project',
           component: projectView
         },
+        {
+          path: 'photo',
+          component: photoView
+        }
       ]
     },
 ]

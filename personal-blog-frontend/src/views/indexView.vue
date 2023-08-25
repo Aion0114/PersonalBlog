@@ -15,19 +15,31 @@
         <!--        中栏-->
         <span id="nav-middle" class="AlibabaBold">
           <div class="middle-items">
-              <div>
-                <wenku style="margin-right: 10px"></wenku>
+              <div class="middle-item">
+                <div>
+                  <wenku style="margin-right: 10px"></wenku>
                 <span>文库</span>
+                </div>
               </div>
-              <div @click="jump.jumpToProject()">
+              <div class="middle-item" @click="jump.jumpToProject()">
                 <daima style="margin-right: 10px"></daima>
                 <span>项目</span>
               </div>
-              <div>
+              <div class="middle-item">
                 <life style="margin-right: 10px"></life>
                 <span>生活</span>
+                <ul class="middle-item-child">
+                  <li>
+                    <a @click="jump.jumpToPhoto()">
+                      <camera-alt class="inline-icon"></camera-alt>
+                      <span>相册</span>
+                    </a>
+                  </li>
+                  <li></li>
+                  <li></li>
+                </ul>
               </div>
-              <div>
+              <div class="middle-item">
                 <benzhan style="margin-right: 5px"></benzhan>
                 <span>本站</span>
               </div>
@@ -63,10 +75,11 @@ import {reactive} from "vue";
 import {options} from "@/assets/js/particleOptions";
 import {loadFull} from 'tsparticles';
 import jumpMethod from "@/router/jumpMethod";
+import CameraAlt from "@/components/icon/camera-alt";
 
 export default {
   name: "indexView",
-  components: {Gengduo, Share, Sousuo, Benzhan, Life, Daima, Wenku, HeadMenu},
+  components: {CameraAlt, Gengduo, Share, Sousuo, Benzhan, Life, Daima, Wenku, HeadMenu},
   setup() {
 
     const particlesInit = async (engine) => {
@@ -238,5 +251,98 @@ export default {
   background-color: rgb(66,90,239);
   transition: all 0.5s;
   color: white;
+}
+
+@keyframes sub_menus {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.middle-item-child {
+  position: absolute;
+  display: none;
+  margin-top: 8px;
+  padding: 0;
+  border-radius: 5px;
+  background-color: #f6f8fa;
+  box-shadow: 0 5px 20px -4px rgba(0, 0, 0, .5);
+  animation: sub_menus .3s .1s ease both;
+  white-space: nowrap;
+  top: 40px;
+  left: -22px;
+}
+
+.middle-item-child:before {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  content: '';
+}
+
+.middle-item:hover .middle-item-child {
+  display: block;
+}
+
+.middle-item-child li {
+  list-style: none;
+  border-radius: 5px;
+  transition: all .3s;
+  display: inline-flex;
+  margin: 0 6px;
+  padding: 6px 0;
+}
+
+.middle-item-child li a {
+  color: #363636;
+  text-shadow: none;
+  padding: 10px 8px 0 calc(8px + 0.3rem);
+  border-radius: 8px;
+  transition: background .35s ease-in-out, color .2s ease-in-out;
+  font-weight: 700;
+  display: inline-block;
+  width: 100%;
+  letter-spacing: normal;
+  height: 40px;
+}
+
+.middle-item-child li:hover a {
+  background: #425aef;
+  color: #fff!important;
+}
+
+@keyframes tada {
+  0% {
+    transform: scaleX(1);
+  }
+  10%, 20% {
+    transform: scale3d(.9, .9, .9) rotate(-3deg);
+  }
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+  }
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.middle-item-child li:hover .inline-icon {
+  transition: all .05s ease-in;
+  fill: #fff;
+  animation: tada, 2s, linear, infinite;
+}
+
+.middle-item-child li a span {
+  margin-left: 5px;
 }
 </style>
