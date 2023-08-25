@@ -84,13 +84,24 @@
               </a>
             </div>
             <div class="project-list-item">
-              <a title="" target="_blank">
+              <a title="" target="_blank" href="https://segmentfault.com/">
                 <div class="project-list-item-icon">
-                  <img src="../assets/imageDecry.png" alt="个人博客">
+                  <img src="../assets/SegmentFault.png" alt="思否">
                 </div>
                 <div class="project-list-item-info">
-                  <div class="project-list-item-name">基于二维码为载体的图像加密管理系统</div>
-                  <div class="project-list-item-detail">我的毕业设计!</div>
+                  <div class="project-list-item-name">思否</div>
+                  <div class="project-list-item-detail">为中文开发者提供纯粹、高质的技术交流平台以及最前沿的技术行业动态</div>
+                </div>
+              </a>
+            </div>
+            <div class="project-list-item">
+              <a title="" target="_blank" href="https://juejin.cn/">
+                <div class="project-list-item-icon">
+                  <img src="../assets/juejin.png" alt="稀土掘金">
+                </div>
+                <div class="project-list-item-info">
+                  <div class="project-list-item-name">稀土掘金</div>
+                  <div class="project-list-item-detail">国内优质的开发者交流学习社区之一，可以多去看看大佬们写的文章!</div>
                 </div>
               </a>
             </div>
