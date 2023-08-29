@@ -18,6 +18,31 @@
         </div>
         <canvas id="top-canvas" width="1370" height="988" style="position:absolute; bottom: 0"></canvas>
       </div>
+<!--      中部相框-->
+      <div id="photo-middle">
+        <div class="photo-card">
+          <img class="card_cover" src="../assets/cat-lighting.jpeg" alt="">
+          <div class="card_content">
+            <p class="card_category">我的</p>
+            <h3 class="card_heading">我 的 日 常</h3>
+          </div>
+        </div>
+        <div class="photo-card">
+          <img class="card_cover" src="../assets/zqu-lake.jpg" alt="">
+          <div class="card_content">
+            <p class="card_category">我的学校</p>
+            <h3 class="card_heading">肇庆学院</h3>
+          </div>
+        </div>
+        <div class="photo-card">
+          <img class="card_cover" src="../assets/mmexport1691946632258.jpg" alt="">
+          <div class="card_content">
+            <p class="card_category">美丽的风景照</p>
+            <h3 class="card_heading">Everywhere</h3>
+          </div>
+        </div>
+        <div class="photo-card-nocover"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -226,5 +251,77 @@ export default {
 .top-button:hover .top-button-icon {
   transition: 0.1s ease-in;
   fill: #fff;
+}
+
+#photo-middle {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 64px 0 0;
+}
+
+.photo-card {
+  list-style: none;
+  position: relative;
+  display: flex;
+  width: calc(100% / 4 - 10px);
+  padding: 10px;
+}
+
+.photo-card:hover {
+  cursor: pointer;
+}
+
+.card_cover {
+  height: 600px;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition: filter 200ms linear, transform 200ms linear;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+.photo-card:hover .card_cover {
+  transform: scale(1.05) translateZ(0);
+  filter: brightness(0.9) saturate(1.2) contrast(1);
+}
+
+#photo-middle:hover > .photo-card:not(:hover) .card_cover {
+  filter: brightness(0.5) saturate(0.9) contrast(1.2) blur(20px);
+}
+
+.card_content {
+  left: 0;
+  padding: 24px;
+  position: absolute;
+  top: 0;
+}
+
+
+.card_category {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.card_heading {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+  position: relative;
+  margin: 20px 0 14px;
+  font-weight: bold;
+}
+
+.photo-card-nocover {
+  width: calc(100% /4 - 40px);
 }
 </style>
